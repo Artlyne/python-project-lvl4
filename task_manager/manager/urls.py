@@ -3,5 +3,5 @@ from task_manager.manager import views
 
 
 urlpatterns = [
-    path('', views.index),
+    path('', views.home, name='home'),
 ]
