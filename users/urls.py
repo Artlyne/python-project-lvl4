@@ -1,6 +1,9 @@
+from users.forms import CreateUserForm
 from django.urls import path
-from users.views import UsersView
+from users.views import ListUsersView, CreateUserView
+
 
 urlpatterns = [
-    path('', UsersView.as_view(template_name='users/users.html'), name='users'),
+    path('', ListUsersView.as_view(), name='users'),
+    path('create/', CreateUserView.as_view(), name='create'),
 ]
